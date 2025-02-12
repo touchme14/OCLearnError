@@ -6,3 +6,7 @@
 5. Run `migration and seeder` if you need
 6. Run `npm install && npm run dev` to compile asset, make sure there's no error
 7. Have fun :)
+
+## Requirement
+1. Node v23.7.0 or latest
+2. Postgres for db
