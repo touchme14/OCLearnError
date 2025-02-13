@@ -10,3 +10,4 @@
 ## Requirement
 1. Node v23.7.0 or latest
 2. Postgres for db
+test
