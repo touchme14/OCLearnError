@@ -1,29 +1,28 @@
-const config = require('./config.js')
-const { Sequelize } = require('sequelize')
+// database.js
+const { Sequelize } = require('sequelize');
+const config = require('./config');
 
-const { host, username, password, database, port, logging, dialect } =
-    config.env === 'development' ? config.development : config.production
+const dbConfig = config.db;
 
-const sequelize = new Sequelize(database, username, password, {
-    host,
-    dialect,
-    port: parseInt(port),
-    logging,
-    dialectOptions: {
-        timezone: 'Asia/Jakarta', // Timezone untuk PostgreSQL
-    },
-    define: {
-        timestamps: true, 
-    },
+const sequelize = new Sequelize(dbConfig.database, dbConfig.username, dbConfig.password, {
+  host: dbConfig.host,
+  dialect: dbConfig.dialect,
+  port: dbConfig.port,
+  logging: dbConfig.logging ? console.log : false, // Lebih baik
+  dialectOptions: {
+    timezone: 'Asia/Jakarta',
+  },
+  define: {
+    timestamps: true,
+  },
 });
 
-const db = {
-    host,
-    username,
-    password,
-    database,
-    port,
-    dialect
-}
+sequelize.authenticate()
+  .then(() => {
+    console.log('Connection to the database has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
 
-module.exports = { db, sequelize }
+module.exports = { db: dbConfig, sequelize };
