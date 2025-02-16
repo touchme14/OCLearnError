@@ -1,0 +1,74 @@
+.sidebar.sidebar-style-2
+    .sidebar-wrapper.scrollbar.scrollbar-inner
+      .sidebar-content
+        .user
+          .avatar-sm.float-left.mr-2
+            img.avatar-img.rounded-circle(src='../assets/img/profile.jpg' alt='...')
+          .info
+            a(data-toggle='collapse' href='#collapseExample' aria-expanded='true')
+              span
+                | Hizrian
+                span.user-level Administrator
+                span.caret
+            .clearfix
+            #collapseExample.collapse.in
+              ul.nav
+                li
+                  a(href='#profile')
+                    span.link-collapse My Profile
+                li
+                  a(href='#edit')
+                    span.link-collapse Edit Profile
+                li
+                  a(href='#settings')
+                    span.link-collapse Settings
+        ul.nav.nav-primary
+          li.nav-item.active
+            a(href='/')
+              i.fas.fa-home
+              p Dashboard
+          li.nav-section
+            span.sidebar-mini-icon
+              i.fa.fa-ellipsis-h
+            h4.text-section Components
+          li.nav-item
+            a(data-toggle='collapse' href='#base')
+              i.fas.fa-layer-group
+              p Master Data
+              span.caret
+            #base.collapse
+              ul.nav.nav-collapse
+                li
+                  a(href='/bahasa')
+                    span.sub-item Bahasa
+                li
+                  a(href='/metodePembayaran')
+                    span.sub-item Metode Pembayaran
+                  
+          li.nav-item
+            a(href='/kelas')
+              i.fas.fa-th-list
+              p Kelas
+          li.nav-item
+            a(href='/kategoriKelas')
+              i.fas.fa-pen-square
+              p Kategori Kelas
+          li.nav-item
+            a(href='/manajemenUsers')
+              i.fas.fa-users
+              p Manajemen User
+          li.nav-item
+            a(href='/pembayaran')
+              i.fas.fa-credit-card
+              p Pembayaran
+              span.badge.badge-success 4
+          li.nav-item
+            a(href='/setting')
+              i.fas.fa-cogs
+              p Setting 
+
+          li.mx-4.mt-2
+            a.btn.btn-primary.btn-block(href='http://themekita.com/atlantis-bootstrap-dashboard')
+              span.btn-label.mr-2
+                i.fa.fa-door-open
+              | Logout
