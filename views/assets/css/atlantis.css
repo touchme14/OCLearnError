@@ -645,8 +645,10 @@ body {
       color: #575962 !important; }
   .sidebar.sidebar-style-2 .nav .nav-item.active a:before {
     background: transparent; }
-  .sidebar.sidebar-style-2 .nav .nav-item .active a {
-    background: rgba(199, 199, 199, 0.2); }
+    .sidebar.sidebar-style-2 .nav .nav-item.active > a {
+      background: #1572E8; /* Warna latar untuk item aktif */
+      box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1), 4px 4px 15px -5px rgba(199, 199, 199, 0.4); /* Efek bayangan */
+      color: #575962 !important; } /* Warna teks dan ikon */    
     .sidebar.sidebar-style-2 .nav .nav-item .active a p, .sidebar.sidebar-style-2 .nav .nav-item .active a i {
       color: #575962 !important; }
   .sidebar.sidebar-style-2 .nav .nav-item.submenu {
@@ -1524,7 +1526,7 @@ body {
   .sidebar[data-background-color="blue"] .nav .nav-section .text-section, .sidebar[data-background-color="blue"] .nav .nav-section .sidebar-mini-icon {
     color: #eaeaea; }
   .sidebar[data-background-color="blue"] .nav .nav-collapse li a .sub-item:before {
-    background: #eaeaea; }
+    background: #1572E8; }
   .sidebar[data-background-color="blue"] .scrollbar-inner > .scroll-element .scroll-bar {
     background-color: #f7f7f7; }
   .sidebar[data-background-color="blue"] .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar, .sidebar[data-background-color="blue"] .scrollbar-inner > .scroll-element:hover .scroll-bar {

@@ -138,4 +138,18 @@ script.
   			lineColor: '#ffa534',
   			fillColor: 'rgba(255, 165, 52, .14)'
   		});
+script.
+  
+  document.addEventListener('DOMContentLoaded', () => {
+      const currentPath = window.location.pathname; // Mendapatkan URL aktif
+      const navItems = document.querySelectorAll('.sidebar .nav .nav-item a'); // Semua link sidebar
+  
+      navItems.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+          link.parentElement.classList.add('active'); // Tambahkan kelas active ke elemen <li>
+        } else {
+          link.parentElement.classList.remove('active'); // Hapus kelas active jika tidak cocok
+        }
+      });
+    });
   
