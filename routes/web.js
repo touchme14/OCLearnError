@@ -1,6 +1,6 @@
 const { Router } = require('express')
 const { bookController } = require('../controllers/web/book/index.js');
-const { dashboardController } = require('../controllers/web/book/index.js');
+const { dashboardController } = require('../controllers/web/dashboard/index.js');
 
 const web = Router()
 
