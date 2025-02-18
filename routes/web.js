@@ -1,14 +1,18 @@
 // routes/web.js
 const { Router } = require('express');
-const bookController = require('../controllers/web/book'); // Import bookController
+
 const authController = require('../controllers/authController'); // Import authController
 
-const webRouter = Router();
+const { bookController } = require('../controllers/web/book/index.js');
+const { dashboardController } = require('../controllers/web/dashboard/index.js');
 
-webRouter.use(authController); // Route untuk autentikasi (register, login)
-webRouter.use('/books', bookController); // Route untuk buku (dengan prefix /books)
+const web = Router();
 
-webRouter.get('/', (req, res) => {
+web.use(authController); // Route untuk autentikasi (register, login)
+web.use('/books', bookController); // Route untuk buku (dengan prefix /books)
+web.use('/', dashboardController)
+
+web.get('/', (req, res) => {
   res.send("Halaman Utama"); // Ganti dengan render view yang sesuai
   // res.render('index'); // Jika ada
 });
@@ -17,4 +21,7 @@ webRouter.get('/', (req, res) => {
 //   res.render('profile');
 // });
 
-module.exports = webRouter;
+
+
+
+module.exports = web;

@@ -6,7 +6,8 @@ const session = require('express-session');
 const csrf = require('csurf');
 const crypto = require('crypto');
 const config = require('./config/config'); // Import config
-const webRouter = require('./routes/web'); // Import webRouter
+const web = require('./routes/web'); // Import webRouter
+const router = require('./cores/router')
 
 const app = express();
 
@@ -40,8 +41,8 @@ app.use(function (req, res, next) {
   next();
 });
 
-// --- Gunakan webRouter ---
-app.use(webRouter); // SEMUA route sekarang di webRouter
+// --- Gunakan web ---
+app.use(web); // SEMUA route sekarang di web
 
 // --- Error Handling (di akhir) ---
 app.use((req, res, next) => {
