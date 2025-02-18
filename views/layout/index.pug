@@ -6,9 +6,11 @@ include ../partials/head.pug
   // Sidebar
   include ../partials/sidebar.pug
   // End Sidebar
-  include ../partials/footer.pug
   body
-    block content
-  block modal 
+    .main-panel
+      .content
+        block content
+      include ../partials/footer.pug
+      block modal
 
   include ../partials/script.pug
