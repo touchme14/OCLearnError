@@ -14,4 +14,10 @@ listBook.get('/detail/:id', async (req, res) => {
     }
 })
 
-module.exports = listBook
+const dashboard = Router()
+
+dashboard.get('/', (req, res) => {
+    res.render('pages/home/index', { title: 'Atlantis Lite Dashboard' });
+});
+
+module.exports = listBook, dashboard;

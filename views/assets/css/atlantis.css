@@ -1526,7 +1526,7 @@ body {
   .sidebar[data-background-color="blue"] .nav .nav-section .text-section, .sidebar[data-background-color="blue"] .nav .nav-section .sidebar-mini-icon {
     color: #eaeaea; }
   .sidebar[data-background-color="blue"] .nav .nav-collapse li a .sub-item:before {
-    background: #1572E8; }
+    background: #eaeaea; }
   .sidebar[data-background-color="blue"] .scrollbar-inner > .scroll-element .scroll-bar {
     background-color: #f7f7f7; }
   .sidebar[data-background-color="blue"] .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar, .sidebar[data-background-color="blue"] .scrollbar-inner > .scroll-element:hover .scroll-bar {
